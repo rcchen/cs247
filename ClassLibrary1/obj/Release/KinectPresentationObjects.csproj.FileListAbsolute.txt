@@ -1,0 +1,5 @@
+C:\Users\RogerChen\Documents\GitHub\jarm\ClassLibrary1\bin\Release\ClassLibrary1.dll
+C:\Users\RogerChen\Documents\GitHub\jarm\ClassLibrary1\bin\Release\ClassLibrary1.pdb
+C:\Users\RogerChen\Documents\GitHub\jarm\ClassLibrary1\obj\Release\KinectPresentationObjects.csprojResolveAssemblyReference.cache
+C:\Users\RogerChen\Documents\GitHub\jarm\ClassLibrary1\obj\Release\ClassLibrary1.dll
+C:\Users\RogerChen\Documents\GitHub\jarm\ClassLibrary1\obj\Release\ClassLibrary1.pdb

@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SlideshowGestures-WPF</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Samples.Kinect.Slideshow.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Samples.Kinect.Slideshow.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.activeRecognizer">
+            <summary>
+            The recognizer being used.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.picturePaths">
+            <summary>
+            The paths of the picture files.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.SkeletonSegmentRuns">
+            <summary>
+            Array of arrays of contiguous line segements that represent a skeleton.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.nui">
+            <summary>
+            The sensor we're currently tracking.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.isDisconnectedField">
+            <summary>
+            There is currently no connected sensor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.disconnectedReasonField">
+            <summary>
+            Any message associated with a failure to connect.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.skeletons">
+            <summary>
+            Array to receive skeletons from sensor, resize when needed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.highlightTime">
+            <summary>
+            Time until skeleton ceases to be highlighted.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.highlightId">
+            <summary>
+            The ID of the skeleton to highlight.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.nearestId">
+            <summary>
+            The ID if the skeleton to be tracked.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.indexField">
+            <summary>
+            The index of the current image.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.stopwatch">
+            <summary>
+            The stopwatch that we use to detect click events.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.currentX">
+            <summary>
+            Current x value of pointer
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.currentY">
+            <summary>
+            Current y value of pointer
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.relatedItemsDown">
+            <summary>
+            True if the related items pane is currently being displayed
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.inAnnotationMode">
+            <summary>
+            True if currently in AnnotationMode
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.p">
+            <summary>
+            The presentation object that holds all the slides
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Samples.Kinect.Slideshow.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.CreatePicturePaths">
+            <summary>
+            Get list of files to display as pictures.
+            </summary>
+            <returns>Paths to pictures.</returns>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.LoadPicture(System.Int32)">
+            <summary>
+            Load the picture with the given index.
+            </summary>
+            <param name="index">The index to use.</param>
+            <returns>Corresponding image.</returns>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.CreateRecognizer">
+            <summary>
+            Create a wired-up recognizer for running the slideshow.
+            </summary>
+            <returns>The wired-up recognizer.</returns>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.InitializeNui">
+            <summary>
+            Handle insertion of Kinect sensor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.UninitializeNui">
+            <summary>
+            Handle removal of Kinect sensor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.OnMainWindowLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Window loaded actions to initialize Kinect handling.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event args.</param>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.OnSkeletonFrameReady(System.Object,Microsoft.Kinect.SkeletonFrameReadyEventArgs)">
+            <summary>
+            Handler for skeleton ready handler.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The event args.</param>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.SelectRelatedItem(System.Double,System.Double)">
+            <summary>
+            Uses the current y value to get the associated related item. 
+            Then, switches to related item.
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.SelectObject(System.Double,System.Double)">
+            <summary>
+            Selects object at current x, y
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.lastPoint">
+            <summary>
+            Stuff.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Samples.Kinect.Slideshow.MainWindow.lastLastPoint">
+            <summary>
+            Stuff.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.HighlightSkeleton(Microsoft.Kinect.Skeleton)">
+            <summary>
+            Select a skeleton to be highlighted.
+            </summary>
+            <param name="skeleton">The skeleton</param>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.DrawStickMen(Microsoft.Kinect.Skeleton[])">
+            <summary>
+            Draw stick men for all the tracked skeletons.
+            </summary>
+            <param name="skeletons">The skeletons to draw.</param>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.DrawStickMan(Microsoft.Kinect.Skeleton,System.Windows.Media.Brush,System.Int32)">
+            <summary>
+            Draw an individual skeleton.
+            </summary>
+            <param name="skeleton">The skeleton to draw.</param>
+            <param name="brush">The brush to use.</param>
+            <param name="thickness">This thickness of the stroke.</param>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.GetVideo(KinectPresentor.Slide)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.GetJointPoint(Microsoft.Kinect.Skeleton,Microsoft.Kinect.JointType)">
+            <summary>
+            Convert skeleton joint to a point on the StickMen canvas.
+            </summary>
+            <param name="skeleton">The skeleton.</param>
+            <param name="jointType">The joint to project.</param>
+            <returns>The projected point.</returns>
+        </member>
+        <member name="M:Microsoft.Samples.Kinect.Slideshow.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="E:Microsoft.Samples.Kinect.Slideshow.MainWindow.PropertyChanged">
+            <summary>
+            Event implementing INotifyPropertyChanged interface.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.IsDisconnected">
+            <summary>
+            Gets a value indicating whether no Kinect is currently connected.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.DisconnectedReason">
+            <summary>
+            Gets any message associated with a failure to connect.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.Index">
+            <summary>
+            Gets or sets the index number of the image to be shown.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.VideoHorizCenter">
+            <summary>
+            where to put the play button
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.VideoVertCenter">
+            <summary>
+            where to put the play button
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.VideoVertOverlay">
+            <summary>
+            where to put the play button overlay
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.VideoHorizOverlay">
+            <summary>
+            where to put the play button overlay
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.PlayButton">
+            <summary>
+            Gets the video
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.myVideo">
+            <summary>
+            Has the pause button Image
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.PreviousPicture">
+            <summary>
+            Gets the previous image displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.Picture">
+            <summary>
+            Gets the current image to be displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.NextPicture">
+            <summary>
+            Gets teh next image displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.ParentPicture">
+            <summary>
+            Gets the current image to be displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.RelatedPicture1">
+            <summary>
+            Gets the first related image displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.RelatedPicture2">
+            <summary>
+            Gets the second related image displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.RelatedPicture3">
+            <summary>
+            Gets the third related image displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.RelatedPicture4">
+            <summary>
+            Gets the fourth related image displayed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Samples.Kinect.Slideshow.MainWindow.RelatedPicture5">
+            <summary>
+            Gets the fifth related image displayed.
+            </summary>
+        </member>
+    </members>
+</doc>

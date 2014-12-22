@@ -1,0 +1,17 @@
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\SlideshowGestures-WPF.exe.config
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\RandomDecisionForest.Proposal.Harness.XML
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\SlideshowGestures-WPF.exe
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\SlideshowGestures-WPF.pdb
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\ClassLibrary1.dll
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\GestureRecognizer.dll
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\Microsoft.Samples.Kinect.SwipeGestureRecognizer.dll
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\ClassLibrary1.pdb
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\bin\Release\GestureRecognizer.pdb
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\SlideshowGestures-WPF.csprojResolveAssemblyReference.cache
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\MainWindow.baml
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\MainWindow.g.cs
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\App.g.cs
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\SlideshowGestures-WPF_MarkupCompile.cache
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\SlideshowGestures-WPF.g.resources
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\SlideshowGestures-WPF.exe
+C:\Users\RogerChen\Documents\GitHub\jarm\SwipeShow\obj\Release\SlideshowGestures-WPF.pdb
